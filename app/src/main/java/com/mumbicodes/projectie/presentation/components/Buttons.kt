@@ -1,6 +1,7 @@
 package com.mumbicodes.projectie.presentation.components
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -25,7 +26,7 @@ fun PrimaryButton(
 ) {
     Button(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.defaultMinSize(minHeight = 54.dp),
         shape = MaterialTheme.shapes.small,
         enabled = isEnabled,
         colors = ButtonDefaults.buttonColors(
@@ -38,7 +39,8 @@ fun PrimaryButton(
     ) {
         Text(
             text = text.uppercase(Locale.getDefault()),
-            style = MaterialTheme.typography.labelLarge
+            style = MaterialTheme.typography.labelLarge,
+            color = if (isEnabled) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.inversePrimary
         )
     }
 }
@@ -58,7 +60,7 @@ fun SecondaryButton(
     }
     Button(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.defaultMinSize(minHeight = 54.dp),
         shape = MaterialTheme.shapes.small,
         enabled = isEnabled,
         border = BorderStroke(2.dp, borderColor),
