@@ -3,7 +3,7 @@ object Versions {
     //Version codes for all the libraries
     const val androidApplication = "7.2.1"
     const val androidLibrary = "7.2.1"
-    const val kotlin = "1.8.10"
+    const val kotlin = "1.8.21"
 
     const val appCompat = "1.4.1"
     const val ktx = "1.7.0"
@@ -15,12 +15,13 @@ object Versions {
     const val espresso = "3.5.0-alpha03"
 
     //Compose
-    const val composeUi = "1.4.0-beta01"
-    const val composeMaterial3 = "1.1.0-alpha07"
+    const val composeBOM = "2023.06.01"
+    const val composeUi = "1.4.3"
+    const val composeMaterial3 = "1.1.0"
     const val composeMaterial2 = "1.2.1"
-    const val constraintLayoutCompose = "1.0.0-beta02"
+    const val constraintLayoutCompose = "1.0.1"
     const val activityCompose = "1.3.1"
-    const val composeCompiler = "1.4.2"
+    const val composeCompiler = "1.4.7"
 
     // Lifecycle
     const val lifecycle = "2.4.1"
@@ -35,7 +36,7 @@ object Versions {
     const val coroutines = "1.5.0"
 
     //Navigation
-    const val navVersion = "2.5.0-alpha03"
+    const val navVersion = "2.6.0"
 
     // Hilt
     const val hilt = "2.45"

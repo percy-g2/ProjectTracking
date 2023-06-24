@@ -266,7 +266,7 @@ fun AllProjectsScreenContent(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(start = Space20dp, end = Space20dp),
-                    verticalArrangement = Arrangement.spacedBy(Space16dp),
+                    verticalItemSpacing = Space16dp,
                     horizontalArrangement = Arrangement.spacedBy(Space16dp)
                 ) {
                     items(projectsScreenState.data.filteredProjects) { project ->
@@ -510,7 +510,7 @@ fun StaggeredVerticalGridPreview2() {
             ),
             modifier = Modifier.padding(horizontal = Space20dp),
             contentPadding = PaddingValues(vertical = Space12dp),
-            verticalArrangement = Arrangement.spacedBy(Space16dp),
+            verticalItemSpacing = Space16dp,
             horizontalArrangement = Arrangement.spacedBy(Space16dp)
         ) {
             items(sampleDataProjects()) { project ->

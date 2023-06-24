@@ -336,7 +336,7 @@ fun AllMilestonesScreenContent(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(start = Space20dp, end = Space20dp),
-                    verticalArrangement = Arrangement.spacedBy(Space16dp),
+                    verticalItemSpacing = Space16dp,
                     horizontalArrangement = Arrangement.spacedBy(Space16dp)
                 ) {
                     items(milestonesStates.data.filteredMilestones) { milestoneWithTasks ->
@@ -451,7 +451,7 @@ enum class BottomSheetType {
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
 fun AllMilestonesPreviewDark() {
-    ProjectTrackingTheme() {
+    ProjectTrackingTheme {
         LazyVerticalStaggeredGrid(
             columns = rememberProjectsColumns(
                 windowWidthSizeClass = calculateWindowSizeClass(activity = MainActivity()).widthSizeClass
@@ -460,7 +460,7 @@ fun AllMilestonesPreviewDark() {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(start = Space20dp, end = Space20dp),
-            verticalArrangement = Arrangement.spacedBy(Space16dp),
+            verticalItemSpacing = Space16dp,
             horizontalArrangement = Arrangement.spacedBy(Space16dp)
         ) {
             items(sampleDataMilestones()) { milestoneWithTasks ->

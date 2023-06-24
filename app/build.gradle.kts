@@ -36,11 +36,11 @@ android {
     }
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -48,11 +48,12 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Versions.composeCompiler
     }
-    packagingOptions {
+    packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    namespace = "com.mumbicodes.projectie"
 }
 
 dependencies {
@@ -75,7 +76,7 @@ dependencies {
 
     // Room
     implementation(Libraries.roomRuntime)
-    implementation("androidx.window:window:1.0.0")
+    implementation("androidx.window:window:1.1.0")
     kapt(Libraries.roomCompiler)
     implementation(Libraries.roomKtx)
 
@@ -98,10 +99,10 @@ dependencies {
     implementation(Libraries.moshiConverter)
 
     // Enable support for DateFormatter language APIs on any version of the Android platform
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 
     // Compose Calendar
-    implementation("com.squaredem:composecalendar:1.0.4")
+    implementation("com.squaredem:composecalendar:1.1.0")
 
     // Datastore
     implementation(Libraries.dataStore)
